@@ -18,7 +18,7 @@ const MainPage = () => {
             <div className={styles.chatboxTextbox}>
 
             </div>
-            <ChatInput className={styles.chatSubmit}></ChatInput>
+            <ChatInput></ChatInput>
         </div>
     
   )
