@@ -1,12 +1,12 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useRef, useEffect  } from 'react';
 import styles from "../styles/mainpage.module.css"
 
 const MainPage = () => {
 
-    // const [messages, setMessages] = useState([]);
-    // const [input, setInput] = useState('');
-    // const messagesEndRef = useRef(null);
+    const [messages, setMessages] = useState([]);
+    const [input, setInput] = useState('');
+    const messagesEndRef = useRef(null);
 
     return (
         <div className={styles.chatboxContainer}>
@@ -19,7 +19,9 @@ const MainPage = () => {
             </div>
 
             <div className={styles.chatSubmit}>
-                
+                <div className={styles.userSubmitBox}>
+
+                </div>
             </div>
         </div>
     
