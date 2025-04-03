@@ -1,0 +1,6 @@
+.chatboxContainer {
+    display: flex;
+    align-items: center;
+    height: 100vw;
+    width: 50vw;
+}
