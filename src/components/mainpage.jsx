@@ -1,13 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useRef, useEffect  } from 'react';
 import styles from "../styles/mainpage.module.css"
 import ChatInput from './chatinput'
 
 const MainPage = () => {
 
-    // const [messages, setMessages] = useState([]);
-    // const [input, setInput] = useState('');
-    // const messagesEndRef = useRef(null);
+    const [messages, setMessages] = useState([]);
+    const [input, setInput] = useState('');
+    const messagesEndRef = useRef(null);
 
     return (
         <div className={styles.chatboxContainer}>

@@ -22,4 +22,11 @@
     height: 100px;
     width: 100%;
     background-color: aqua;
+    display: block;
+}
+
+.userSubmitBox {
+    height: 90%;
+    width: 90%;
+    background-color: purple;
 }
