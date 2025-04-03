@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import styles from "../styles/mainpage.module.css"
+import ChatInput from './chatinput'
 
 const MainPage = () => {
 
@@ -17,10 +18,7 @@ const MainPage = () => {
             <div className={styles.chatboxTextbox}>
 
             </div>
-
-            <div className={styles.chatSubmit}>
-                
-            </div>
+            <ChatInput className={styles.chatSubmit}></ChatInput>
         </div>
     
   )
