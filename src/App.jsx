@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import './App.css'
+import MainPage from './components/mainpage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Chatbot</h1>
-
+      <MainPage/>
+      
     </>
   )
 }

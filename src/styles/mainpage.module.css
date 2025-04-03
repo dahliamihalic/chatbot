@@ -1,6 +1,25 @@
 .chatboxContainer {
     display: flex;
     align-items: center;
-    height: 100vw;
+    height: 800px;
     width: 50vw;
+    background-color: red;
+    display: block;
+}
+
+.chatboxHeader {
+    height: 100px;
+    width: 100%;
+    background-color: blanchedalmond;
+}
+
+.chatboxTextbox {
+    height: 600px;
+    width: 100%;
+}
+
+.chatSubmit {
+    height: 100px;
+    width: 100%;
+    background-color: aqua;
 }
