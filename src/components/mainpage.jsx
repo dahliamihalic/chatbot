@@ -12,13 +12,13 @@ const MainPage = () => {
     return (
         <div className={styles.chatboxContainer}>
             <div className={styles.chatboxHeader}>
-
+                <h1>Google</h1>
             </div>
 
             <div className={styles.chatboxTextbox}>
 
             </div>
-            <ChatInput></ChatInput>
+            <ChatInput/>
         </div>
     
   )

@@ -1,32 +1,60 @@
+:root {
+    /* https://coolors.co/palette/22223b-4a4e69-9a8c98-c9ada7-f2e9e4 */
+    --color1: #22223B;
+    --color2: #4A4E69;
+    --color3: #9A8C98;
+    --color4: #C9ADA7;
+    --color5: #F2E9E4;
+}
+
 .chatboxContainer {
     display: flex;
     align-items: center;
     height: 800px;
     width: 50vw;
-    background-color: red;
+    /* background-color: red; */
     display: block;
 }
 
 .chatboxHeader {
     height: 100px;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: var(--color5);
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    display: flex;
+    /* color: aquamarine; */
+    color: var(--color1);
+    text-indent: 1.5rem;
 }
 
 .chatboxTextbox {
     height: 600px;
     width: 100%;
+    background-color: var(--color4);
 }
+
 
 .chatSubmit {
     height: 100px;
     width: 100%;
-    background-color: aqua;
-    display: block;
+    background-color: var(--color5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chatInput {
+    border-radius: 20px;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color4);
 }
 
 .userSubmitBox {
-    height: 90%;
+    border-radius: 20px;
+    height: 60%;
     width: 90%;
-    background-color: purple;
+    /* background-color: purple; */
 }
