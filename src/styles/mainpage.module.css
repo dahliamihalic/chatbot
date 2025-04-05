@@ -1,60 +1,99 @@
 :root {
-    /* https://coolors.co/palette/22223b-4a4e69-9a8c98-c9ada7-f2e9e4 */
     --color1: #22223B;
     --color2: #4A4E69;
     --color3: #9A8C98;
     --color4: #C9ADA7;
     --color5: #F2E9E4;
+
+    --radius: 20px;
+    --padding: 1rem;
 }
 
 .chatboxContainer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     height: 800px;
     width: 50vw;
-    /* background-color: red; */
-    display: block;
+    background-color: var(--color2);
+    border-radius: var(--radius);
+    font-family: var(--font);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .chatboxHeader {
     height: 100px;
-    width: 100%;
     background-color: var(--color5);
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
     display: flex;
-    /* color: aquamarine; */
+    align-items: center;
+    padding-left: var(--padding);
     color: var(--color1);
-    text-indent: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .chatboxTextbox {
-    height: 600px;
-    width: 100%;
+    flex: 1;
     background-color: var(--color4);
+    padding: var(--padding);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
+.message {
+    background-color: var(--color5);
+    color: var(--color1);
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    max-width: 70%;
+    align-self: flex-start;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .chatSubmit {
     height: 100px;
-    width: 100%;
     background-color: var(--color5);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.chatInput {
-    border-radius: 20px;
-    border: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color4);
+    padding: 0 var(--padding);
 }
 
 .userSubmitBox {
-    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
     height: 60%;
-    width: 90%;
-    /* background-color: purple; */
+}
+
+.chatInput {
+    flex: 1;
+    border-radius: var(--radius);
+    border: 2px solid var(--color3);
+    height: 100%;
+    padding: 0 1rem;
+    background-color: var(--color4);
+    color: var(--color1);
+    font-size: 1rem;
+    outline: none;
+}
+
+.submitButton {
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--color2);
+    color: var(--color5);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+    background-color: var(--color3);
 }
