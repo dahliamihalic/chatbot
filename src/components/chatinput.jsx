@@ -1,7 +1,8 @@
 import styles from "../styles/mainpage.module.css";
 import { useState, useEffect } from "react";
+import setMessages from "./mainpage";
 
-function ChatInput() {
+function ChatInput({ messages, setMessages }) {
     const [textInput, setTextInput] = useState("");
 
     const handleChange = (e) => {
@@ -12,14 +13,19 @@ function ChatInput() {
         e.preventDefault();
         if (textInput.trim() !== "") {
             console.log("Submitted message:", textInput);
-            // TODO: Send the message to API or parent component
+
+            const newMessage = {
+                text: textInput,
+                sender: "user"
+              };
+            setMessages([...messages, newMessage]);
             setTextInput(""); // Clear input after submit
         }
     };
 
     useEffect(() => {
         //I'm assuming the API will be placed here
-        
+
     }, []);
 
     return (

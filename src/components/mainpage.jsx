@@ -21,18 +21,18 @@ const MainPage = () => {
         const message = userMessage.toLowerCase();
         
         // Check each category for matching patterns
-        for (const category in responses) {
+        for (const category in data) {
           if (category === 'default') continue;
           
-          const patterns = responses[category].patterns;
-          if (patterns.some(pattern => message.includes(pattern))) {
-            const responsesList = responses[category].responses;
+          const patterns = data[category].patterns;
+          if (patterns.some(pattern => message.includes(pattern))) { //ex: check if message says 'hello' to see if you should respond with 'hello' back
+            const responsesList = data[category].responses;
             return responsesList[Math.floor(Math.random() * responsesList.length)];
           }
         }
     
         // If no match found, return a default response
-        const defaultResponses = responses.default.responses;
+        const defaultResponses = data.default.responses;
         return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
       };
 
@@ -60,3 +60,4 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
