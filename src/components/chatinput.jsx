@@ -19,6 +19,7 @@ function ChatInput() {
 
     useEffect(() => {
         //I'm assuming the API will be placed here
+        
     }, []);
 
     return (

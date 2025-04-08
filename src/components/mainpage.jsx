@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import styles from "../styles/mainpage.module.css";
 import ChatInput from './chatinput';
+import data from '../data/data.json';
+
 
 const MainPage = () => {
     const [messages, setMessages] = useState([]);
@@ -14,6 +16,28 @@ const MainPage = () => {
         // Scrolly
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
+
+    const getBotResponse = (userMessage) => {
+        const message = userMessage.toLowerCase();
+        
+        // Check each category for matching patterns
+        for (const category in responses) {
+          if (category === 'default') continue;
+          
+          const patterns = responses[category].patterns;
+          if (patterns.some(pattern => message.includes(pattern))) {
+            const responsesList = responses[category].responses;
+            return responsesList[Math.floor(Math.random() * responsesList.length)];
+          }
+        }
+    
+        // If no match found, return a default response
+        const defaultResponses = responses.default.responses;
+        return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+      };
+
+
+
 
     return (
         <div className={styles.chatboxContainer}>
