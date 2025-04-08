@@ -2,7 +2,7 @@ import styles from "../styles/mainpage.module.css";
 import { useState, useEffect } from "react";
 import setMessages from "./mainpage";
 
-function ChatInput({ messages, setMessages }) {
+function ChatInput({ messages }) {
     const [textInput, setTextInput] = useState("");
 
     const handleChange = (e) => {
@@ -22,11 +22,6 @@ function ChatInput({ messages, setMessages }) {
             setTextInput(""); // Clear input after submit
         }
     };
-
-    useEffect(() => {
-        //I'm assuming the API will be placed here
-
-    }, []);
 
     return (
         <form onSubmit={textSubmit} className={styles.chatSubmit}>
