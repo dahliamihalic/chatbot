@@ -28,6 +28,15 @@ const MainPage = () => {
                 sender: "user"
             };
             setMessages([...messages, newMessage]);
+
+            setTimeout(() => {
+                const botResponse = {
+                    text: getBotResponse(textInput),
+                    sender: "bot"
+                };
+                setMessages(prev => [...prev, botResponse]);
+            }, 1000);
+            
             setTextInput(""); // Clear input after submit
         }
     };
@@ -55,14 +64,6 @@ const MainPage = () => {
         const defaultResponses = data.default.responses;
         return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
     };
-
-    setTimeout(() => {
-        const botResponse = {
-            text: getBotResponse(textInput),
-            sender: "bot"
-        };
-        setMessages(prev => [...prev, botResponse]);
-    }, 1000);
 
     return (
         <div className={styles.chatboxContainer}>
