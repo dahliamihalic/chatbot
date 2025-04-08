@@ -1,41 +1,55 @@
 {
-    "greetings": {
+    "welcome": {
       "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening"],
       "responses": [
-        "Hello! How can I help you today?",
-        "Hi there! What can I do for you?",
-        "Hey! Nice to meet you. How can I assist you?"
+        "Hello! This is a test chatbot version 0.0.0.1! Not all functions will be implemented within the final build, so please be patient!"
       ]
     },
-    "farewells": {
-      "patterns": ["bye", "goodbye", "see you", "good night"],
+    "bye": {
+      "patterns": ["bye", "goodbye", "see you", "good night", "later"],
       "responses": [
-        "Goodbye! Have a great day!",
-        "See you later! Take care!",
-        "Bye! Feel free to come back if you need anything."
+        "Have a good one!",
+        "Despacito",
+        "Adios!",
+        "Ciao!",
+        "Buonanotte",
+        "Auf Wiedersehen",
+        "La revedere"
       ]
     },
     "thanks": {
       "patterns": ["thanks", "thank you", "appreciate it"],
       "responses": [
-        "You're welcome!",
-        "No problem at all!",
-        "Glad I could help!"
+        "Awesome sauce!",
+        "No problemo!",
+        "cool",
+        "Yep! Any other questions?",
+        "Got anything else?"
       ]
     },
     "help": {
       "patterns": ["help", "what can you do", "capabilities"],
       "responses": [
-        "I can help you with basic questions and conversations. I can greet you, say goodbye, and respond to thank you messages!",
-        "I'm a simple chatbot that can engage in basic conversations. Try saying hello, asking for help, or saying goodbye!",
-        "I'm here to chat! I can respond to greetings, farewells, and expressions of gratitude."
+        "What do you need help on?",
+        "Do you have anything to work on?",
+        "Sorry! I can't help you right now- just kidding! What do you need?"
       ]
+    },
+    "country": {
+        "patterns": ["USA, China, Canada, Japan, Germany, Korea, Mexico, Brazil"],
+        "responses": [
+            "You just said a country! Nice!"
+        ]
+    },
+    "no": {
+        "patterns": ["what is", "how is", "who is", "where is", "when is"],
+        "responses": [
+            "no"
+        ]
     },
     "default": {
       "responses": [
-        "I'm not sure I understand. Could you rephrase that?",
-        "I'm still learning. Could you try asking something else?",
-        "I don't have a specific response for that yet. Try asking something else!"
+        "The bot is currently broken. Please try again later."
       ]
     }
   } 
