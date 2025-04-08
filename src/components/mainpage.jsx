@@ -72,9 +72,10 @@ const MainPage = () => {
 
             <div className={styles.chatboxTextbox}>
                 {messages.map((msg, index) => (
-                    <div key={index} className={styles.message}>
+                    <div key={index} className={styles.message + (msg.sender === "user" ? ` ${styles.userMessage}` : ` ${styles.botMessage}`)}>
                         <span>{msg.text}</span>
                     </div>
+
                 ))}
                 <div ref={messagesEndRef} />
             </div>

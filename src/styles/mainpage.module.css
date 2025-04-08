@@ -54,6 +54,17 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.userMessage {
+    background-color: var(--color2);
+    color: var(--color5);
+    align-self: flex-end;
+}
+
+.botMessage {
+    background-color: var(--color5);
+    color: var(--color1);
+}
+
 .chatSubmit {
     height: 100px;
     background-color: var(--color5);
